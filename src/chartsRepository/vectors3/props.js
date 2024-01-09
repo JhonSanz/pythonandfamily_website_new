@@ -1,4 +1,4 @@
-import { generate2dVectors } from 'utils/generateVector';
+import { generate2dVectors } from '@/utils/generateVector';
 
 var layout = {
   grid: { rows: 2, columns: 1, pattern: 'independent', ygap: 0.09 },

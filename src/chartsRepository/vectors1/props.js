@@ -1,5 +1,5 @@
-import { generateConeCoords, generate_LineCoords, generateMarker } from 'utils/generateVector';
-import COLORS from 'utils/colors';
+import { generateConeCoords, generate_LineCoords, generateMarker } from '@/utils/generateVector';
+import COLORS from '@/utils/colors';
 
 const lines = [
   { x: [3, 8], y: [3, 8], z: [3, 10], cone: false, color: COLORS.green, name: 'E=A+B', dotted: false },

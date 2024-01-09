@@ -1,8 +1,8 @@
-import ListConsiderations from 'utils/listConsiderations';
-import FormulaTable from 'utils/formulaTable';
-import { generate2dVectors } from 'utils/generateVector';
-import { layout_subchart, config_subchart } from 'utils/chartProps';
-import ModalChart from 'components/detailedChart/modalChart';
+import ListConsiderations from '@/utils/listConsiderations';
+import FormulaTable from '@/utils/formulaTable';
+import { generate2dVectors } from '@/utils/generateVector';
+import { layout_subchart, config_subchart } from '@/utils/chartProps';
+import ModalChart from '@/components/modalChart';
 import Plot from 'react-plotly.js';
 
 var Latex = require('react-latex');

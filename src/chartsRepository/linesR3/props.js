@@ -1,8 +1,8 @@
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
-import { generateConeCoords, generate_LineCoords, generateMarker } from 'utils/generateVector';
+import { generateConeCoords, generate_LineCoords, generateMarker } from '@/utils/generateVector';
 import './linesr3.css';
-import COLORS from 'utils/colors';
+import COLORS from '@/utils/colors';
 var Latex = require('react-latex');
 
 const P = { x: 0.2, y: 1, z: 1 }

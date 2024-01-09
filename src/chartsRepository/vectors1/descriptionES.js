@@ -1,4 +1,4 @@
-import FormulaTable from 'utils/formulaTable';
+import FormulaTable from '@/utils/formulaTable';
 var Latex = require('react-latex');
 
 const description = <div>

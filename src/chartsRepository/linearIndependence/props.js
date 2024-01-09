@@ -1,7 +1,7 @@
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
-import { generateConeCoords, generate_LineCoords } from 'utils/generateVector';
-import COLORS from 'utils/colors';
+import { generateConeCoords, generate_LineCoords } from '@/utils/generateVector';
+import COLORS from '@/utils/colors';
 import './linearIndependence.css';
 var Latex = require('react-latex');
 

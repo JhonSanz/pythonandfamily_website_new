@@ -1,5 +1,5 @@
-import FormulaTable from 'utils/formulaTable';
-import ListConsiderations from 'utils/listConsiderations';
+import FormulaTable from '@/utils/formulaTable';
+import ListConsiderations from '@/utils/listConsiderations';
 var Latex = require('react-latex');
 
 const description = <div>

@@ -3,8 +3,8 @@ import {
   generate_LineCoords,
   generateMarker,
   generatePlane
-} from 'utils/generateVector';
-import COLORS from 'utils/colors';
+} from '@/utils/generateVector';
+import COLORS from '@/utils/colors';
 
 const nullVector = { x: 0, y: 0, z: 0 }
 const P = { x: 1, y: 2, z: 2 }

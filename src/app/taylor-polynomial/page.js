@@ -5,7 +5,7 @@ export default function Vectors1() {
   return (
     <>
       <DefaultChartComponent
-        module={"vectors1"}
+        module={"taylorPolynomial"}
         language={"ES"}
       />
     </>

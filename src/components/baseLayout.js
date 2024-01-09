@@ -1,15 +1,16 @@
 "use client"
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import Grid from '@mui/material/Grid';
 import DetailedChart from '@/components/detailedChart';
 import './App.css';
 import CircularProgress from '@mui/material/CircularProgress';
 import getDescriptionChart from '@/utils/importDescriptionChart';
+import { ThemeProvider } from '@/utils/providers';
 
 
-export default function DefaultChartComponent({
-  module, language
-}) {
+export default function DefaultChartComponent({ module }) {
+  const { language } = useContext(ThemeProvider);
+
   const [chartMiniDescription, setChartMiniDescription] = useState(undefined);
   const [chartDescription, setChartDescription] = useState(undefined);
   const [chartProps, setChartProps] = useState(undefined);
@@ -24,7 +25,7 @@ export default function DefaultChartComponent({
       setReady(true);
     }
     importChartModule();
-  }, []);
+  }, [language]);
 
   return (
     <Grid>

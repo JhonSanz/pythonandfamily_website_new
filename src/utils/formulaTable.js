@@ -1,4 +1,4 @@
-import COLORS from 'utils/colors';
+import COLORS from '@/utils/colors';
 var Latex = require('react-latex');
 
 const FormulaTable = ({

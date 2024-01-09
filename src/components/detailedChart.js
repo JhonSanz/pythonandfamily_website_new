@@ -7,7 +7,7 @@ import CenteredProgress from '@/utils/progress';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
-// import Plotly from 'plotly.js-gl3d-dist-min';
+import Plotly from 'plotly.js-gl3d-dist-min';
 import { layout_subchart, config_subchart } from '@/utils/chartProps';
 
 const style = {
@@ -34,6 +34,7 @@ export default function DetailedChart({
   const [open, setOpen] = useState(false);
   const [initialData, setIinitialData] = useState([]);
   const [managedData, setmanagedData] = useState(undefined);
+  
   const [count, setCount] = useState(8);
   const [inputValues, setInputValues] = useState({
     xVector: "",

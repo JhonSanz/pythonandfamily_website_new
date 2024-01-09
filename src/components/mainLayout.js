@@ -1,4 +1,5 @@
-import { useState, useContext } from 'react';
+"use client"
+import { useState, useContext, useEffect } from 'react';
 import { useRouter } from "next/navigation";
 import AppBar from '@mui/material/AppBar';
 import IconButton from '@mui/material/IconButton';
@@ -11,7 +12,7 @@ import FormControl from '@mui/material/FormControl';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
-import repo from '@/utils/chartsList';
+import { chartsList } from '@/utils/chartsList';
 import { MATH, STATS, EN, ES } from '@/utils/const';
 import CustomToolbar from '@/styled/toolbar';
 import CustomSelect from '@/styled/select';
@@ -20,9 +21,10 @@ import Menu from '@mui/material/Menu';
 import { ThemeProvider } from '@/utils/providers';
 
 const TemporaryDrawer = () => {
-  const { open, setOpen, subject, setSubject, setLanguage } = useContext(ThemeProvider);
+  const { open, setOpen, subject, setSubject, language, setLanguage } = useContext(ThemeProvider);
 
   const [anchorEl, setAnchorEl] = useState(null);
+  const [repo, setRepo] = useState(null);
   const router = useRouter();
 
   const handleChange = (event) => {
@@ -32,9 +34,14 @@ const TemporaryDrawer = () => {
   const selectLanguage = (language) => {
     setAnchorEl(null);
     setLanguage(language);
-    localStorage.setItem("language", language);
-    window.location.reload();
+    window.localStorage.setItem("language", language);
   }
+
+  useEffect(() => {
+    const list = chartsList(language);
+    setRepo(list);
+  }, [language]);
+
   return (
     <Box>
       <Box>
@@ -77,7 +84,7 @@ const TemporaryDrawer = () => {
               </IconButton>
               <Menu
                 id="menu-appbar"
-                anchorEl={anchorEl}
+                anchorEl=""
                 anchorOrigin={{
                   vertical: 'top',
                   horizontal: 'right',
@@ -113,7 +120,7 @@ const TemporaryDrawer = () => {
               </ListItemButton>
             </ListItem>
             {
-              repo[subject] !== undefined && repo[subject].map((item) => (
+              repo && repo[subject] !== undefined && repo[subject].map((item) => (
                 <ListItem key={item.listName} disablePadding>
                   <ListItemButton onClick={() => router.push(item.route)}>
                     <ListItemText primary={item.listName} />

@@ -1,5 +1,5 @@
-import FormulaTable from 'utils/formulaTable';
-import projection from "img/projections.png";
+import FormulaTable from '@/utils/formulaTable';
+import projection from "@/img/projections.png";
 var Latex = require('react-latex');
 
 const description = <div>
