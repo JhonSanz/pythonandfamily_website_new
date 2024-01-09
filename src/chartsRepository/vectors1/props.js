@@ -10,13 +10,13 @@ const lines = [
   { x: [7, 4], y: [7, 4], z: [5, 8], cone: false, color: COLORS.green, name: '', dotted: true },
 ];
 
-const data = [
+export const data = [
   generateMarker({ 'x': [3], 'y': [3], 'z': [3], color: COLORS.blue, name: "Q" }),
   ...lines.map((lineCoords) => generateConeCoords(lineCoords)).filter(item => item !== undefined),
   ...lines.map((lineCoords) => generate_LineCoords(lineCoords)),
 ]
 
-const layout = {
+export const layout = {
   'scene': {
     'camera': {
       'eye': { 'x': 1, 'y': -1.8, 'z': 0.92 }
@@ -24,7 +24,4 @@ const layout = {
   },
 }
 
-const chartTile = "Parallelogram law";
-
-const chartProps = { data, layout, chartTile }
-export default chartProps;
+export const chartTile = "Parallelogram law";

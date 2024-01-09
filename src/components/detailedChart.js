@@ -117,7 +117,7 @@ export default function DetailedChart({
             data={dataChart}
             layout={layoutProps}
             config={configSubchart}
-            style={{ height: '80%' }}
+            style={{ height: '80%', width: "100%" }}
           />
         </Suspense>
       </Grid>

@@ -10,12 +10,12 @@ const lines = [
   { x: [0, 8], y: [8, 8], z: [0, 0], cone: false, color: COLORS.blue, name: '', dotted: true },
 ];
 
-const data = [
+export const data = [
   ...lines.map((lineCoords) => generateConeCoords(lineCoords)).filter(item => item !== undefined),
   ...lines.map((lineCoords) => generate_LineCoords(lineCoords)),
 ]
 
-const layout = {
+export const layout = {
   'scene': {
     'camera': {
       'eye': { 'x': 1, 'y': -1.8, 'z': 0.92 }
@@ -23,7 +23,4 @@ const layout = {
   },
 }
 
-const chartTile = "Vector norm";
-
-const chartProps = { data, layout, chartTile }
-export default chartProps;
+export const chartTile = "Vector norm";

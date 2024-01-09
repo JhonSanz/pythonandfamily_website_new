@@ -112,15 +112,13 @@ const generatePlaneSet = (P, A, B, nullVector) => {
 const lines = generateLinesSet(P, A, B, V1, V2, V3, nullVector);
 const points = generatePointsSet(P, A, V1, V2, V3);
 const planes = generatePlaneSet(P, A, B, nullVector);
-const data = generateData(points, lines, planes);
-const chartTile = "Planes in R³";
+export const data = generateData(points, lines, planes);
+export const chartTile = "Planes in R³";
 
-const layout = {
+export const layout = {
   'scene': {
     'camera': {
       'eye': { 'x': -0.3, 'y': -1.2, 'z': -0.1 }
     }
   },
 }
-const chartProps = { data, layout, chartTile }
-export default chartProps;

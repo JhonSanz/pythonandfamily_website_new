@@ -7,7 +7,7 @@ import ButtonGroup from '@mui/material/ButtonGroup';
 import { dataDefault, layout, chartTile, removeTerm, addTerm } from "@/chartsRepository/taylorPolynomial/props";
 import { description, miniDescription } from "@/chartsRepository/taylorPolynomial/descriptionEN";
 
-const DataManager = ({ data, setData }) => {
+const DataManager = ({ setData }) => {
   const [defaultParam, setDefaultParam] = useState(8);
 
   return (

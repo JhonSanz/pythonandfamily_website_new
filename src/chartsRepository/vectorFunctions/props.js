@@ -94,7 +94,8 @@ const chartProps = {
     // generateIntegralVector(-2),
     generateIntegralVectorV2(-1)
   ],
-  layout: {}
+  layout: {},
+  chartTitle: "vector functions"
 }
 
 export default chartProps;

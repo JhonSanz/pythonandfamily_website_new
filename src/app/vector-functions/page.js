@@ -1,13 +1,19 @@
+"use client";
 
-import DefaultChartComponent from "@/components/baseLayout"
+import DetailedChart from "@/components/detailedChart";
+import { data, layout, chartTile } from "@/chartsRepository/vectorFunctions/props";
+import { description, miniDescription } from "@/chartsRepository/vectorFunctions/descriptionEN";
 
-export default function Vectors1() {
+export default function VectorFunctions() {
   return (
     <>
-      <DefaultChartComponent
-        module={"vectorFunctions"}
-         
-      />
+      <DetailedChart
+        miniDescription={miniDescription}
+        description={description}
+        chartProps={{ layout, chartTile }}
+        data={data}
+      >
+      </DetailedChart>
     </>
   )
 }
