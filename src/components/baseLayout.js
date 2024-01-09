@@ -8,7 +8,9 @@ import getDescriptionChart from '@/utils/importDescriptionChart';
 import { ThemeProvider } from '@/utils/providers';
 
 
-export default function DefaultChartComponent({ module }) {
+export default function DefaultChartComponent({
+  module
+}) {
   const { language } = useContext(ThemeProvider);
 
   const [chartMiniDescription, setChartMiniDescription] = useState(undefined);
@@ -41,7 +43,6 @@ export default function DefaultChartComponent({ module }) {
           miniDescription={chartMiniDescription}
           description={chartDescription}
           chartProps={chartProps}
-          module={module}
         />
       }
     </Grid>

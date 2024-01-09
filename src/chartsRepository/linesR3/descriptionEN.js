@@ -4,8 +4,9 @@ import FormulaTable from '@/utils/formulaTable';
 import { generate2dVectors } from '@/utils/generateVector';
 import { layout_subchart, config_subchart } from '@/utils/chartProps';
 import ModalChart from '@/components/modalChart';
-import Plot from 'react-plotly.js';
 
+import dynamic from "next/dynamic";
+const Plot = dynamic(() => import("react-plotly.js"), { ssr: false, })
 var Latex = require('react-latex');
 
 const layout_props = {

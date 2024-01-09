@@ -1,6 +1,3 @@
-import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
-
 const x = [];
 const exp = [];
 const taylor_1 = [];
@@ -54,7 +51,7 @@ while (i <= 5) {
   i += 1 / 10;
 }
 
-const data = [
+export const dataDefault = [
   getTaylorPolynomial(x, exp, "y = e^x"),
   getTaylorPolynomial(x, taylor_1, "y'"),
   getTaylorPolynomial(x, taylor_2, "y^(2)"),
@@ -65,75 +62,21 @@ const data = [
   getTaylorPolynomial(x, taylor_7, "y^(7)"),
 ];
 
-const removeTerm = (count) => {
-  if (count === 0) return [data[0]];
-  return [data[0], data[count]];
+export const removeTerm = (count) => {
+  if (count === 0) return [dataDefault[0]];
+  return [dataDefault[0], dataDefault[count]];
 }
 
-const addTerm = (count) => {
-  if (count === data.length) return [data[0], data[data.length - 1]];
-  return [data[0], data[count]];
+export const addTerm = (count) => {
+  if (count === dataDefault.length) return [dataDefault[0], dataDefault[dataDefault.length - 1]];
+  return [dataDefault[0], dataDefault[count]];
 }
 
-const DataManager = (setmanagedData, managerParams) => {
-  const { count, setCount } = managerParams["taylorPolynomial"];
 
-  return (
-    <div>
-      <ButtonGroup variant="contained" aria-label="outlined primary button group">
-        <Button
-          size="small"
-          onClick={() => {
-            if (count > 0) {
-              setmanagedData(removeTerm(count - 1))
-              setCount(count - 1);
-            }
-          }}
-        >
-          -
-        </Button>
-        <Button
-          color="secondary"
-          size="small"
-          onClick={() => {
-            setmanagedData([data[0]]);
-            setCount(0);
-          }}
-        >
-          reset
-        </Button>
-        <Button
-          color="success"
-          size="small"
-          onClick={() => {
-            setmanagedData(data);
-            setCount(data.length);
-          }}
-        >
-          all
-        </Button>
-        <Button
-          size="small"
-          onClick={() => {
-            if (count < (data.length - 1)) {
-              setmanagedData(addTerm(count + 1))
-              setCount(count + 1);
-            }
-          }}
-        >
-          +
-        </Button>
-      </ButtonGroup>
-    </div >
-  )
-}
-
-const layout = {
+export const layout = {
   yaxis: { range: [-4, 8] },
   xaxis: { range: [-4, 4] },
   legend: { "orientation": "h", "xanchor": "center", "x": 0.5, "y": 0 },
 }
-const chartTile = "Taylor polynomial";
+export const chartTile = "Taylor polynomial";
 
-const chartProps = { data, layout, chartTile, DataManager }
-export default chartProps;

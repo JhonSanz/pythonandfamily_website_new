@@ -6,7 +6,7 @@ export default function Vectors1() {
     <>
       <DefaultChartComponent
         module={"vectorFunctions"}
-        language={"ES"}
+         
       />
     </>
   )
