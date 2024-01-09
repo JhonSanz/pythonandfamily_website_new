@@ -46,7 +46,7 @@ export default function DetailedChart({
   useEffect(() => {
     setDataChart(data)
   }, [data])
-  
+
   useEffect(() => {
     setConfigSubchart(config_subchart);
     setLayoutProps({
@@ -113,13 +113,12 @@ export default function DetailedChart({
         display={"flex"}
       >
         <Suspense fallback={<CenteredProgress />}>
-          <div style={{ width: '100%', height: '80%', margin: "20px", marginTop: "0px" }}>
-            <Plot
-              data={dataChart}
-              layout={layoutProps}
-              config={configSubchart}
-            />
-          </div>
+          <Plot
+            data={dataChart}
+            layout={layoutProps}
+            config={configSubchart}
+            style={{ height: '80%' }}
+          />
         </Suspense>
       </Grid>
       <div>

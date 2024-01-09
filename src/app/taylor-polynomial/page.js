@@ -29,6 +29,7 @@ const DataManager = ({ data, setData }) => {
           size="small"
           onClick={() => {
             setData([dataDefault[0]]);
+            setDefaultParam(0);
           }}
         >
           reset
@@ -38,6 +39,7 @@ const DataManager = ({ data, setData }) => {
           size="small"
           onClick={() => {
             setData(dataDefault);
+            setDefaultParam(dataDefault.length);
           }}
         >
           all
@@ -45,7 +47,6 @@ const DataManager = ({ data, setData }) => {
         <Button
           size="small"
           onClick={() => {
-            console.log(defaultParam, data)
             if (defaultParam < (dataDefault.length - 1)) {
               setData(addTerm(defaultParam + 1))
               setDefaultParam(defaultParam + 1);
