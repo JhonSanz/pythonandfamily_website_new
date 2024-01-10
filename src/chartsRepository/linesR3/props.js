@@ -1,7 +1,7 @@
 import { generateConeCoords, generate_LineCoords, generateMarker } from '@/utils/generateVector';
 import './linesr3.css';
 import COLORS from '@/utils/colors';
-var Latex = require('react-latex');
+import Latex from 'react-latex-next'
 
 const P = { x: 0.2, y: 1, z: 1 }
 const A = { x: 1, y: 1, z: 0.5 }

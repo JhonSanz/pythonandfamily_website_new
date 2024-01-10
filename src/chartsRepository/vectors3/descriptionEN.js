@@ -1,6 +1,6 @@
 import FormulaTable from '@/utils/formulaTable';
 import projection from "@/img/projections.png";
-var Latex = require('react-latex');
+import Latex from 'react-latex-next'
 
 const description = <div>
   <p>The triangular inequality says that if you sum two sides of a triangle the result is going to be greater than or equal to the remaining side. It could be pretty obvious visually in our context of vectors, but in math all have to be demonstrated. As we can see in our chart, given two vectors <Latex>{"$A, B$"}</Latex> the sum is <Latex>{"$A + B$"}</Latex>, using the paralelogram rule. To get the magnitude of each one, we use <Latex>{"$\\lVert A \\rVert, \\lVert B \\rVert, $ and $\\lVert A + B\\rVert$"}</Latex>. So, to present it:</p>
@@ -30,7 +30,7 @@ const description = <div>
   <hr />
   <p>Now, let's imagine this scenario. This is a bus stop, and as you can see there is a ceiling to protect pedestrians from the sunlight. This <b>generates a shadow on the floor</b>. This is exactly the same as our second chart, just we have to keep in mind that the vector <Latex>{"$A$"}</Latex> generates a "shadow" on <Latex>{"$B$"}</Latex>. It is important to note that this visual approach could be tricky because the position of the sun could affect the position of the shadow. In this ideal scenario the sun generates a  <b>shadow which is 90° with the floor</b>.</p><br />
   <p style={{ textAlign: "center" }}>
-    <img src={projection} alt="" style={{ width: "100%", maxWidth: "700px", height: "auto" }} />
+    <img src={projection.src} alt="" style={{ width: "100%", maxWidth: "700px", height: "auto" }} />
   </p>
   <p>If we check our second chart we can see the vectors <Latex>{"$A, B$"}</Latex> but there is another vector <Latex>{"$C$"}</Latex>, which is orthogonal to <Latex>{"$B$"}</Latex>. But, let's take a look. In our chart <Latex>{"$B + C$ ≠ $A$"}</Latex> because the Paralelogram Law. So, if we think we have to scale <Latex>{"$B$"}</Latex>, to sum <Latex>{"$B$ and $C$"}</Latex>. So, if we multiply <Latex>{"$tB$"}</Latex> as we can see in our chart, we are going to have <Latex>{"$A = tB + C$"}</Latex> following the idea of the "shadow". Now, let's eliminate <Latex>{"$C$"}</Latex> from this equation.</p>
   <FormulaTable data={[

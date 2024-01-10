@@ -1,5 +1,5 @@
 import FormulaTable from '@/utils/formulaTable';
-var Latex = require('react-latex');
+import Latex from 'react-latex-next'
 
 const description = <div>
   <p>Vectors are represented as oriented segments or arrows. Their operations are expressed based in their components
@@ -15,10 +15,10 @@ const description = <div>
     Here there is a representation of the parallelogram law. We have two vectors <Latex>{"$A, B$"}</Latex>. Notice that their
     intial point is not the coordinate origin <Latex>{"$(0,0,0)$"}</Latex>. Instead of that, we have: <br />
   </p>
+  <FormulaTable data={[
+    "$A = (4,4,8)$ $B = (7,7,5)$ $Q = (3,3,3)$"
+  ]} />
   <p>
-    <FormulaTable data={[
-      "$A = (4,4,8)$ $B = (7,7,5)$ $Q = (3,3,3)$"
-    ]} />
     Where <Latex>{"$Q$"}</Latex> is the initial point for both <Latex>{"$A, B$"}</Latex>.
   </p>
   <p>If we substract the final and the initial point, <b>we will get the vector drawed from the origin</b>. We are going to do that because we want to check <Latex>{'$\\overrightarrow{QA} = \\overrightarrow{BE}$'}</Latex> and <Latex>{'$\\overrightarrow{QB} = \\overrightarrow{AE}$'}</Latex>. But, what is the value of <Latex>{"$E$"}</Latex>?. First, let's calculate the diffrence between:

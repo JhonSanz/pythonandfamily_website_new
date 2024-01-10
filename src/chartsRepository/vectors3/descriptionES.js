@@ -1,6 +1,6 @@
 import FormulaTable from '@/utils/formulaTable';
 import projection from "@/img/projections.png";
-var Latex = require('react-latex');
+import Latex from 'react-latex-next'
 
 const description = <div>
   <p>La desigualdad triangular dice que si sumas dos lados de un triángulo, el resultado será mayor o igual que el lado restante. Puede ser bastante obvio visualmente en nuestro contexto de vectores, pero en matemáticas todo debe demostrarse. Como podemos ver en nuestro gráfico, dados dos vectores <Latex>{"$A, B$"}</Latex>, la suma es <Latex>{"$A + B$"}</Latex>, usando la regla del paralelogramo. Para obtener la magnitud de cada uno, usamos <Latex>{"$\\lVert A \\rVert, \\lVert B \\rVert, $ y $\\lVert A + B\\rVert$"}</Latex>. Entonces, para presentarlo:</p>

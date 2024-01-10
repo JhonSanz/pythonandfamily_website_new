@@ -6,7 +6,7 @@ import ModalChart from '@/components/modalChart';
 
 import dynamic from "next/dynamic";
 const Plot = dynamic(() => import("react-plotly.js"), { ssr: false, })
-var Latex = require('react-latex');
+import Latex from 'react-latex-next'
 
 const layout_props = {
   ...layout_subchart, showlegend: false,

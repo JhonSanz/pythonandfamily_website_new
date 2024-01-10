@@ -6,7 +6,7 @@ import { useState } from "react";
 import DetailedChart from "@/components/detailedChart";
 import { dataDefault, layout, chartTile, applyNewData } from "@/chartsRepository/linesR3/props";
 import { description, miniDescription } from "@/chartsRepository/linesR3/descriptionEN";
-var Latex = require('react-latex');
+import Latex from 'react-latex-next'
 
 
 const DataManager = ({ setData }) => {

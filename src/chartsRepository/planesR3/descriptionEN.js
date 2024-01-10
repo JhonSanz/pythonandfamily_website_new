@@ -1,6 +1,6 @@
 import FormulaTable from '@/utils/formulaTable';
 import ListConsiderations from '@/utils/listConsiderations';
-var Latex = require('react-latex');
+import Latex from 'react-latex-next'
 
 const description = <div>
   <p>

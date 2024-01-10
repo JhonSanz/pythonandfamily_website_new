@@ -1,5 +1,5 @@
 import COLORS from '@/utils/colors';
-var Latex = require('react-latex');
+import Latex from 'react-latex-next'
 
 const FormulaTable = ({
   data, enableScroll = false

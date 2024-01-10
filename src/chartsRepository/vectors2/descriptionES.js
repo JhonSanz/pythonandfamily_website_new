@@ -1,5 +1,5 @@
 import FormulaTable from '@/utils/formulaTable';
-var Latex = require('react-latex');
+import Latex from 'react-latex-next'
 
 const description = <div>
   <p>Veamos dos operaciones importantes que podemos realizar con vectores y uno de los teoremas más utilizados.</p>

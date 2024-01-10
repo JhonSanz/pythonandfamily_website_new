@@ -1,5 +1,5 @@
 import FormulaTable from '@/utils/formulaTable';
-var Latex = require('react-latex');
+import Latex from 'react-latex-next'
 
 const description = <div>
   <p>First, let's introduce the Linear Combination concept. Given some vectors, we multiply each one by a constant, and then, we sum all the results together. For example:</p>

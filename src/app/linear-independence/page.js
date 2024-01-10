@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import { dataDefault, layout, chartTile, addVector } from "@/chartsRepository/linearIndependence/props";
 import { description, miniDescription } from "@/chartsRepository/linearIndependence/descriptionEN";
-var Latex = require('react-latex');
+import Latex from 'react-latex-next'
 
 
 const DataManager = ({ setData }) => {
