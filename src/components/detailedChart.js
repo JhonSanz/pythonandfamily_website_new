@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect, Suspense } from 'react';
+import { useState, useEffect, Suspense, useContext } from 'react';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -8,7 +8,8 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import { layout_subchart, config_subchart } from '@/utils/chartProps';
-
+import lazyImportByLang from '@/utils/lazyImportByLang';
+import { ThemeProvider } from '@/utils/providers';
 
 import dynamic from "next/dynamic";
 const Plot = dynamic(() => import("react-plotly.js"), { ssr: false, })
@@ -29,12 +30,12 @@ const style = {
 };
 
 export default function DetailedChart({
-  miniDescription,
-  description,
+  moduleName,
   chartProps,
   children,
   data
 }) {
+  const { language } = useContext(ThemeProvider);
   const { layout, chartTile } = chartProps;
   const [open, setOpen] = useState(false);
 
@@ -42,6 +43,17 @@ export default function DetailedChart({
   const [layoutProps, setLayoutProps] = useState(undefined);
   const [configSubchart, setConfigSubchart] = useState(undefined);
 
+  const [description, setDescription] = useState(undefined);
+  const [miniDescription, setMiniDescription] = useState(undefined);
+
+  useEffect(() => {
+    const importChartModule = async () => {
+      const { chartDescription, chartMiniDescription } = await lazyImportByLang(moduleName, language);
+      setDescription(chartDescription);
+      setMiniDescription(chartMiniDescription);
+    }
+    if (language) importChartModule();
+  }, [language]);
 
   useEffect(() => {
     setDataChart(data)

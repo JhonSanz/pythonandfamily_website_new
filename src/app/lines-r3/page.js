@@ -134,8 +134,7 @@ export default function LinesR3() {
   return (
     <>
       <DetailedChart
-        miniDescription={miniDescription}
-        description={description}
+        moduleName="linesR3"
         chartProps={{ layout, chartTile }}
         data={data}
       >

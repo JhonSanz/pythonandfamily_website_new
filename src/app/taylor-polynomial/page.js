@@ -69,8 +69,7 @@ export default function Vectors1() {
   return (
     <>
       <DetailedChart
-        miniDescription={miniDescription}
-        description={description}
+        moduleName="taylorPolynomial"
         chartProps={{ layout, chartTile }}
         data={data}
       >

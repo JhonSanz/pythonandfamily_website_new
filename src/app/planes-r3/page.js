@@ -8,8 +8,7 @@ export default function PlanesR3() {
   return (
     <>
       <DetailedChart
-        miniDescription={miniDescription}
-        description={description}
+        moduleName="planesR3"
         chartProps={{ layout, chartTile }}
         data={data}
       >

@@ -8,8 +8,7 @@ export default function Vectors3() {
   return (
     <>
       <DetailedChart
-        miniDescription={miniDescription}
-        description={description}
+        moduleName="vectors3"
         chartProps={{ layout, chartTile }}
         data={data}
       >

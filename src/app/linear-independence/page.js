@@ -97,8 +97,7 @@ export default function Vectors1() {
   return (
     <>
       <DetailedChart
-        miniDescription={miniDescription}
-        description={description}
+        moduleName="linearIndependence"
         chartProps={{ layout, chartTile }}
         data={data}
       >
