@@ -20,6 +20,14 @@ export default function RootLayout({ children }) {
       <meta name="description" content="Python and Family website" />
       <meta name="keywords" content="Math, statistics, nextjs, notebook" />
       <link rel="manifest" href="/static/site.webmanifest" />
+
+      <meta property="og:title" content="Python and Family website" />
+      <meta property="og:type" content="Python and Family website" />
+      <meta property="og:image" content="/static/preview.png" />
+      <meta property="og:url" content="/static/preview.png" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:image" content="/static/preview.png" />
+
       <body className={inter.className} style={{ margin: 0 }}>
         <Providers>
           {children}
