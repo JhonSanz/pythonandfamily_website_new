@@ -1,7 +1,7 @@
 "use client";
 
 import DetailedChart from "@/components/detailedChart";
-import { data, layout, chartTile } from "@/chartsRepository/vectors2/props";
+import { data, layout, chartTitle } from "@/chartsRepository/vectors2/props";
 import { description, miniDescription } from "@/chartsRepository/vectors2/descriptionEN";
 
 export default function Vectors2() {
@@ -9,7 +9,7 @@ export default function Vectors2() {
     <>
       <DetailedChart
         moduleName="vectors2"
-        chartProps={{ layout, chartTile }}
+        chartProps={{ layout, chartTitle }}
         data={data}
       >
       </DetailedChart>

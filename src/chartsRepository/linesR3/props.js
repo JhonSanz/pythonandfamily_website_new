@@ -99,4 +99,4 @@ export const layout = {
     }
   },
 }
-export const chartTile = "Lines R³";
+export const chartTitle = "Lines R³";

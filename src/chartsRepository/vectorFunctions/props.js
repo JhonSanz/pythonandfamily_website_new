@@ -46,56 +46,53 @@ const generateIntegralVectorV2 = (init) => {
   const x = [];
   const y = [];
   for (let i = init; i <= 2.05;) {
-    x.push((i * i)/2 - (init * init)/2)
-    y.push(((i * i)/2 + i) - ((init * init)/2 + init))
+    x.push((i * i) / 2 - (init * init) / 2)
+    y.push(((i * i) / 2 + i) - ((init * init) / 2 + init))
     i += 0.05;
   }
   return generateIntegralTerm(x, y, "red")
 }
 
-const chartProps = {
-  data: [
-    {
-      'type': 'scatter', 'mode': 'lines+text',
-      'textposition': 'middle left', 'showlegend': false,
-      'text': ["", ""],
-      x: [-2, 0, 5],
-      // y: [0, 0, 0],
-      y: [-1, 1, 6],
-      'line': {
-        'width': 6,
-        'dash': 'solid',
-      },
+export const data = [
+  {
+    'type': 'scatter', 'mode': 'lines+text',
+    'textposition': 'middle left', 'showlegend': false,
+    'text': ["", ""],
+    x: [-2, 0, 5],
+    // y: [0, 0, 0],
+    y: [-1, 1, 6],
+    'line': {
+      'width': 6,
+      'dash': 'solid',
     },
-    {
-      'type': 'scatter', 'mode': 'lines+text',
-      'textposition': 'middle left', 'showlegend': false,
-      'text': ["", ""],
-      x: [-2, 0, 5],
-      // y: [0, 0, 0],
-      y: [0, 2, 7],
-      'line': {
-        'width': 6,
-        'dash': 'solid',
-      },
+  },
+  {
+    'type': 'scatter', 'mode': 'lines+text',
+    'textposition': 'middle left', 'showlegend': false,
+    'text': ["", ""],
+    x: [-2, 0, 5],
+    // y: [0, 0, 0],
+    y: [0, 2, 7],
+    'line': {
+      'width': 6,
+      'dash': 'solid',
     },
-    {
-      'type': 'scatter', 'mode': 'lines+text',
-      'textposition': 'middle left', 'showlegend': false,
-      'text': ["", ""],
-      x: [-2, 0, 5],
-      // y: [0, 0, 0],
-      y: [-2, 0, 5],
-      'line': {
-        'width': 6,
-        'dash': 'solid',
-      },
+  },
+  {
+    'type': 'scatter', 'mode': 'lines+text',
+    'textposition': 'middle left', 'showlegend': false,
+    'text': ["", ""],
+    x: [-2, 0, 5],
+    // y: [0, 0, 0],
+    y: [-2, 0, 5],
+    'line': {
+      'width': 6,
+      'dash': 'solid',
     },
-    // generateIntegralVector(-2),
-    generateIntegralVectorV2(-1)
-  ],
-  layout: {},
-  chartTitle: "vector functions"
-}
+  },
+  // generateIntegralVector(-2),
+  generateIntegralVectorV2(-1)
+];
 
-export default chartProps;
+export const layout = {};
+export const chartTitle = "vector functions";

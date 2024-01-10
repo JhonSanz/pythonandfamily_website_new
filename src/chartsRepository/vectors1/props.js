@@ -24,4 +24,4 @@ export const layout = {
   },
 }
 
-export const chartTile = "Parallelogram law";
+export const chartTitle = "Parallelogram law";

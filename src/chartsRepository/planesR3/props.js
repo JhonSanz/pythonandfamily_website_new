@@ -113,7 +113,7 @@ const lines = generateLinesSet(P, A, B, V1, V2, V3, nullVector);
 const points = generatePointsSet(P, A, V1, V2, V3);
 const planes = generatePlaneSet(P, A, B, nullVector);
 export const data = generateData(points, lines, planes);
-export const chartTile = "Planes in R³";
+export const chartTitle = "Planes in R³";
 
 export const layout = {
   'scene': {

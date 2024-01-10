@@ -4,7 +4,7 @@ import { useState } from "react";
 import DetailedChart from "@/components/detailedChart";
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
-import { dataDefault, layout, chartTile, addVector } from "@/chartsRepository/linearIndependence/props";
+import { dataDefault, layout, chartTitle, addVector } from "@/chartsRepository/linearIndependence/props";
 import { description, miniDescription } from "@/chartsRepository/linearIndependence/descriptionEN";
 import Latex from 'react-latex-next'
 
@@ -98,7 +98,7 @@ export default function Vectors1() {
     <>
       <DetailedChart
         moduleName="linearIndependence"
-        chartProps={{ layout, chartTile }}
+        chartProps={{ layout, chartTitle }}
         data={data}
       >
         <DataManager

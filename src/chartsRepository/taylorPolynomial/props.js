@@ -78,5 +78,5 @@ export const layout = {
   xaxis: { range: [-4, 4] },
   legend: { "orientation": "h", "xanchor": "center", "x": 0.5, "y": 0 },
 }
-export const chartTile = "Taylor polynomial";
+export const chartTitle = "Taylor polynomial";
 

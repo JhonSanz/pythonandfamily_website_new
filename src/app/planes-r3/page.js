@@ -1,7 +1,7 @@
 "use client";
 
 import DetailedChart from "@/components/detailedChart";
-import { data, layout, chartTile } from "@/chartsRepository/planesR3/props";
+import { data, layout, chartTitle } from "@/chartsRepository/planesR3/props";
 import { description, miniDescription } from "@/chartsRepository/planesR3/descriptionEN";
 
 export default function PlanesR3() {
@@ -9,7 +9,7 @@ export default function PlanesR3() {
     <>
       <DetailedChart
         moduleName="planesR3"
-        chartProps={{ layout, chartTile }}
+        chartProps={{ layout, chartTitle }}
         data={data}
       >
       </DetailedChart>

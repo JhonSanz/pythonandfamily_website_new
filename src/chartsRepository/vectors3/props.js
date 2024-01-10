@@ -18,4 +18,4 @@ export const data = [
 ];
 
 
-export const chartTile = "Triangular inequality and Projections";
+export const chartTitle = "Triangular inequality and Projections";

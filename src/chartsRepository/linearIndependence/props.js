@@ -36,4 +36,4 @@ export const addVector = (vectorCoords) => {
 }
 
 
-export const chartTile = "Spanning set of R³";
+export const chartTitle = "Spanning set of R³";

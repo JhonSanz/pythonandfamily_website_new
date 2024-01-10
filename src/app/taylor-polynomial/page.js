@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import DetailedChart from "@/components/detailedChart";
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
-import { dataDefault, layout, chartTile, removeTerm, addTerm } from "@/chartsRepository/taylorPolynomial/props";
+import { dataDefault, layout, chartTitle, removeTerm, addTerm } from "@/chartsRepository/taylorPolynomial/props";
 import { description, miniDescription } from "@/chartsRepository/taylorPolynomial/descriptionEN";
 
 const DataManager = ({ setData }) => {
@@ -70,7 +70,7 @@ export default function Vectors1() {
     <>
       <DetailedChart
         moduleName="taylorPolynomial"
-        chartProps={{ layout, chartTile }}
+        chartProps={{ layout, chartTitle }}
         data={data}
       >
         <DataManager

@@ -23,4 +23,4 @@ export const layout = {
   },
 }
 
-export const chartTile = "Vector norm";
+export const chartTitle = "Vector norm";

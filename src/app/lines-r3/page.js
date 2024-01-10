@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import { useState } from "react";
 import DetailedChart from "@/components/detailedChart";
-import { dataDefault, layout, chartTile, applyNewData } from "@/chartsRepository/linesR3/props";
+import { dataDefault, layout, chartTitle, applyNewData } from "@/chartsRepository/linesR3/props";
 import { description, miniDescription } from "@/chartsRepository/linesR3/descriptionEN";
 import Latex from 'react-latex-next'
 
@@ -135,7 +135,7 @@ export default function LinesR3() {
     <>
       <DetailedChart
         moduleName="linesR3"
-        chartProps={{ layout, chartTile }}
+        chartProps={{ layout, chartTitle }}
         data={data}
       >
         <DataManager

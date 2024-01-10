@@ -36,7 +36,7 @@ export default function DetailedChart({
   data
 }) {
   const { language } = useContext(ThemeProvider);
-  const { layout, chartTile } = chartProps;
+  const { layout, chartTitle } = chartProps;
   const [open, setOpen] = useState(false);
 
   const [dataChart, setDataChart] = useState(undefined);
@@ -65,7 +65,7 @@ export default function DetailedChart({
       ...layout,
       ...layout_subchart,
       title: {
-        text: chartTile,
+        text: chartTitle,
         ...layout_subchart.title
       }
     });
